@@ -1,0 +1,6 @@
+Task 1:
+    Algoritmul se bazeaza pe faptul ca ordinea nu conteaza. Acesta citeste numarul N, declara 2 vectori, unul de numere reale si unul de caractere, si le parcurge. De fiecare data cand este efectuata o operatie intre 2 numere consecutive, sa zicem a si b, valoarea rezultata este pastrata in b. Astfel, la urmatoarea operatie, operatia se va efectua cu b si urmatorul numar. La final este afisat ultimul numar din vector.
+Task 2:
+    De data aceasta, ordinea operatiilor conteaza, deci daca rezultatul unei operatii a si b este c, valoarea c este retinuta in a, iar elementul b este eliminat, precum si operatia efectuata. Altfel, operatiile ulterioare se vor efectua pe numerele gresite (de exemplu: 2+2*3+2=6+2=8, conform algoritmului anterior). Am considerat doua functii, high_priority si low_priority. Prima se ocupa de efectuarea tuturor operatiilor de inmultire sau impartire, iar a doua, ce se efectueaza dupa, face operatiile de adunare si scadere. 
+Task 3:
+    Aproape identic cu algoritmul de la taskul 2, doar ca mai este introdusa functia medium_priority, efectuata dupa high si inainte de low, ce se va ocupa de operatiile #.
