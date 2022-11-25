@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+#define MAX 22
+
+void print_arr(int v[MAX], int n) {
+    int i = 0;
+    printf("\n-----\n");
+    for (i = 0; i < n; i++) {
+        printf("%d ", v[i]);
+    }
+    printf("\n-----\n");
+}
+
+int main() {
+
+    int v[MAX]={0};
+    int i = 0;
+    int num_elems = 0;
+    int flag = 1;
+    while (flag) {
+        scanf("%d", &v[i]);
+        i++;
+        num_elems++;
+        if (num_elems == 20)
+            flag = 0;
+        if (v[i-1] <= 0) {
+            num_elems--;
+            flag = 0;
+        }
+    }
+    printf("\n");
+    if (v[0] > v[1])
+        printf("%d ",v[0]);
+    for (i = 1; i < num_elems-1; i++) {
+        if (v[i] > v[i-1] && v[i]>v[i+1]) {
+            printf("%d ",v[i]);
+        }
+    }
+    if (v[num_elems - 1] > v[num_elems - 2] && num_elems > 1) {
+        printf("%d", v[num_elems-1]);
+    }
+    printf("\n");
+    return 0;
+}
